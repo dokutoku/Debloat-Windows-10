@@ -11,57 +11,57 @@ do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
 Write-Output "Uninstalling default apps"
 $apps = @(
     # default Windows 10 apps
-    "Microsoft.549981C3F5F10" #Cortana
+    #"Microsoft.549981C3F5F10" #Cortana #Deletion Failed
     "Microsoft.3DBuilder"
     "Microsoft.Appconnector"
     "Microsoft.BingFinance"
     "Microsoft.BingNews"
     "Microsoft.BingSports"
     "Microsoft.BingTranslator"
-    "Microsoft.BingWeather"
-    #"Microsoft.FreshPaint"
+    #"Microsoft.BingWeather" #Deletion Failed
+    "Microsoft.FreshPaint"
     "Microsoft.GamingServices"
-    "Microsoft.MicrosoftOfficeHub"
+    #"Microsoft.MicrosoftOfficeHub" #Deletion Failed
     "Microsoft.MicrosoftPowerBIForWindows"
-    "Microsoft.MicrosoftSolitaireCollection"
-    #"Microsoft.MicrosoftStickyNotes"
+    #"Microsoft.MicrosoftSolitaireCollection" #Deletion Failed
+    #"Microsoft.MicrosoftStickyNotes" #Deletion Failed
     "Microsoft.MinecraftUWP"
     "Microsoft.NetworkSpeedTest"
-    "Microsoft.Office.OneNote"
-    "Microsoft.People"
+    #"Microsoft.Office.OneNote" #Deletion Failed
+    #"Microsoft.People" #Deletion Failed
     "Microsoft.Print3D"
-    "Microsoft.SkypeApp"
-    "Microsoft.Wallet"
-    #"Microsoft.Windows.Photos"
-    "Microsoft.WindowsAlarms"
-    #"Microsoft.WindowsCalculator"
-    "Microsoft.WindowsCamera"
-    "microsoft.windowscommunicationsapps"
-    "Microsoft.WindowsMaps"
+    #"Microsoft.SkypeApp" #Deletion Failed
+    #"Microsoft.Wallet" #Deletion Failed
+    #"Microsoft.Windows.Photos" #Deletion Failed
+    #"Microsoft.WindowsAlarms" #Deletion Failed
+    #"Microsoft.WindowsCalculator" #Deletion Failed
+    #"Microsoft.WindowsCamera" #Deletion Failed
+    #"microsoft.windowscommunicationsapps" #Deletion Failed
+    #"Microsoft.WindowsMaps" #Deletion Failed
     "Microsoft.WindowsPhone"
-    "Microsoft.WindowsSoundRecorder"
+    #"Microsoft.WindowsSoundRecorder"
     #"Microsoft.WindowsStore"   # can't be re-installed
-    "Microsoft.Xbox.TCUI"
-    "Microsoft.XboxApp"
-    "Microsoft.XboxGameOverlay"
-    "Microsoft.XboxSpeechToTextOverlay"
-    "Microsoft.YourPhone"
-    "Microsoft.ZuneMusic"
-    "Microsoft.ZuneVideo"
+    #"Microsoft.Xbox.TCUI" #Deletion Failed
+    #"Microsoft.XboxApp" #Deletion Failed
+    #"Microsoft.XboxGameOverlay" #Deletion Failed
+    #"Microsoft.XboxSpeechToTextOverlay" #Deletion Failed
+    #"Microsoft.YourPhone" #Deletion Failed
+    #"Microsoft.ZuneMusic" #Deletion Failed
+    #"Microsoft.ZuneVideo" #Deletion Failed
 
     # Threshold 2 apps
     "Microsoft.CommsPhone"
     "Microsoft.ConnectivityStore"
     "Microsoft.GetHelp"
-    "Microsoft.Getstarted"
+    #"Microsoft.Getstarted" #Deletion Failed
     "Microsoft.Messaging"
     "Microsoft.Office.Sway"
     "Microsoft.OneConnect"
-    "Microsoft.WindowsFeedbackHub"
+    #"Microsoft.WindowsFeedbackHub"
 
     # Creators Update apps
-    "Microsoft.Microsoft3DViewer"
-    #"Microsoft.MSPaint"
+    #"Microsoft.Microsoft3DViewer" #Deletion Failed
+    #"Microsoft.MSPaint" #Deletion Failed
 
     #Redstone apps
     "Microsoft.BingFoodAndDrink"
@@ -70,9 +70,9 @@ $apps = @(
     "Microsoft.WindowsReadingList"
 
     # Redstone 5 apps
-    "Microsoft.MixedReality.Portal"
-    "Microsoft.ScreenSketch"
-    "Microsoft.XboxGamingOverlay"
+    #"Microsoft.MixedReality.Portal" #Deletion Failed
+    #"Microsoft.ScreenSketch" #Deletion Failed
+    #"Microsoft.XboxGamingOverlay" #Deletion Failed
 
     # non-Microsoft
     "2FE3CB00.PicsArt-PhotoStudio"
@@ -105,7 +105,7 @@ $apps = @(
     "ShazamEntertainmentLtd.Shazam"
     "SlingTVLLC.SlingTV"
     "SpotifyAB.SpotifyMusic"
-    #"TheNewYorkTimes.NYTCrossword"
+    "TheNewYorkTimes.NYTCrossword"
     "ThumbmunkeysLtd.PhototasticCollage"
     "TuneIn.TuneInRadio"
     "WinZipComputing.WinZipUniversal"
@@ -126,7 +126,7 @@ $apps = @(
     #"Windows.ContactSupport"
 
     # apps which other apps depend on
-    "Microsoft.Advertising.Xaml"
+    #"Microsoft.Advertising.Xaml" #Deletion Failed
 )
 
 $appxprovisionedpackage = Get-AppxProvisionedPackage -Online
